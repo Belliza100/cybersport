@@ -1,0 +1,427 @@
+
+
+@font-face {
+    font-family: M_Bold;
+    src: url("../fonts/Montserrat-Medium.ttf");
+}
+
+@font-face {
+    font-family: M_Regular;
+    src: url("../fonts/Montserrat-Thin.ttf");
+}
+
+@font-face {
+    font-family: M_Light;
+    src: url("../fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: M_SBold;
+    src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+
+/*
+    BASE VARIABLES:
+
+    bgcolor: rgb(25, 25, 25)
+    bgcolordark: rgb(19, 19, 19)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: M_Light;
+    color: white;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+}
+
+input:focus:not(.button) {
+    box-shadow: red 1px 1px 10px;
+}
+
+.header {
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 80px;
+}
+
+.header_nav ul {
+    margin-right: 50px;
+}
+
+.header_nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.header_nav ul li a {
+    font-size: 20px;
+}
+
+.header_nav ul li a:hover,
+.header_nav ul li a.active {
+    color: rgb(255, 0, 0);
+    transition: 0.2s ease;
+}
+
+.header_logo {
+    margin-left: 50px;
+}
+
+.header_logo div {
+    font-size: 35px;
+    display: inline-block;
+}
+
+.header_logo div:nth-child(1) {
+    font-family: M_Bold;
+    font-weight: 500;
+}
+
+.header_logo div:nth-child(2) {
+    font-family: M_Light;
+    color: rgb(255, 0, 0);
+    font-size: 25px;
+    position: absolute;
+    margin-top: 5px;
+}
+
+.footer {
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_socials {
+    padding: 30px;
+}
+
+.footer_socials a img {
+    filter: invert();
+    font-size: 10px;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.footer_socials a:hover img {
+    filter: invert() brightness(0.5);
+    transition: 0.2s ease;
+}
+
+
+.footer_copyright {
+    padding-bottom: 30px;
+}
+
+.main {
+    background-color: rgb(51, 51, 51);
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(10deg, black, transparent), url("../icons/bg.png") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;    
+}
+
+.landing {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    height: 100vh;
+    width: 100%;
+    padding: 100px;         
+}
+
+.landing_textbox * {
+    margin: 30px 0;
+}
+
+.landing_textbox h1 {
+    font-family: M_Light;
+}
+
+.landing_textbox h1 span {
+    font-family: M_Bold;
+    color: rgb(209, 0, 0);
+}
+
+.button {
+    font-family: M_Bold;
+    background-color: rgb(209, 0, 0);
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    color: white;
+}
+
+.button:hover {
+    background-color: rgb(224, 3, 3);
+    cursor: pointer;
+}
+
+.landing_imgbox {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.landing_imgbox img {
+    max-width: 300px;
+    transform: rotate(90deg);
+}
+
+.construct {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.construct * {
+    margin: 0 5px;
+}
+
+.construct img {
+    width: 60px;
+    filter: invert();
+}
+
+.login {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+}
+
+.login h1 {
+    font-family: M_Regular;
+}
+
+.login form {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login form * {
+    margin: 10px 0;
+}
+
+.login_btn {
+    width: 100px;
+}
+
+.login form p {
+    font-size: 10px;
+}
+
+.login form p a {
+    color:rgb(255, 0, 0);
+}
+
+.reg_btn {
+    width: 180px;
+}
+
+#file_selector {
+    display: none;
+}
+
+.file_label {
+    font-family: M_Light;
+    background-color: rgb(209, 0, 0);
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    width: 120px;
+    font-size: 10px;
+}
+
+.file_label:hover {
+    background-color: rgb(224, 3, 3);
+    cursor: pointer;
+}
+
+#menu {
+    display: none;
+}
+
+.header_menu {
+    display: none;
+    filter: invert();
+    cursor: pointer;
+    width: 50px;
+    cursor: pointer;
+    line-height: 100px;    
+}
+
+.profile {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.profile form {
+    padding: 5px 50px;
+}
+
+.profile_frame {
+    background-color: rgb(31, 31, 31);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
+    margin: 10px 10px;
+    padding: 50px;
+}
+
+.profile_frame * {
+    margin: 0 30px;
+}
+
+.profile_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_left * {
+    margin: 20px 0;
+}
+
+.profile_left img,
+.profile_left label img {
+    filter: brightness(1);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: rgb(209, 0, 0) 1px 1px 10px 5px;
+    transition: .2s ease;
+}
+
+.profile_left label img:hover {
+    filter: brightness(0.6);
+    cursor: pointer;
+    font-family: "M_Bold";
+}
+
+.profile_left label p {
+    opacity: 0%;
+    transition: .2s ease;
+}
+
+.profile_left label img:hover ~ p {
+    opacity: 100%;
+}
+
+.profile_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile_right * {
+    margin: 20px 0;
+}
+
+@media (max-width: 1200px) {
+    /* блин */
+}
+
+
+@media (max-width: 700px) {
+    .landing {
+        display: flex; 
+        align-items: center;      
+        justify-content: center;   
+        flex-direction: column;
+        padding: 50px; 
+    }  
+    .landing_imgbox img {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .landing {
+        display: flex; 
+        align-items: center;      
+        justify-content: center;   
+        flex-direction: column;
+        padding: 50px; 
+    } 
+    
+    .header_nav {
+        position: fixed;
+        top: 100px;
+        left: 0;        
+
+        right: -100vw;
+    }
+
+    .header_nav.active {
+        right: 0;
+
+        transition: 0.3s ease;
+    }   
+    
+    .header_nav ul {
+        display: none;
+        right: -5px;
+    }
+    .header_nav.active ul {
+        display: block;
+        width: 100%;
+        height: 100%;        
+        margin: 0;
+        background: rgba(0, 0, 0, 0.8);
+        text-align: right;
+    }    
+    .header_nav.active ul li {
+        display: block;
+        padding: 10px;
+    }
+
+    .header_menu {
+        display: block;
+    }
+
+    .profile_frame {
+        flex-direction: column;
+    }    
+}
+
+

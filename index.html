@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersport</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    
+    <nav class="header">
+        <div class="header_logo">
+                       <div>Cybersport</div>
+        </div>
+
+        <div class="header_nav">
+
+            <ul>
+                <li><a href="index.php" class="active">Home</a></li>
+                <li><a href="construct.php">News</a></li>
+                <li><a href="construct.php">Forum</a></li>
+                <li><a href="construct.php">Bets</a></li>
+                <li><a href=<?php if ( $_SESSION["user"] ) { 
+                    echo "construct.php"; } else { echo "login.php"; } ?>><?php if ( $_SESSION["user"] ) { 
+                    echo "Profile"; } else { echo "Log in"; } ?></a></li>
+            </ul>
+        </div>
+        <img src="./assets/icons/menu.svg" class="header_menu" onclick="toggle('.header_nav')">  
+    </nav>
+
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>
+<div class="main">
+    <div class="landing">
+        <div class="landing_textbox">
+            <h1>Welcome to <span>Cybersport</span></h1>
+            <p>Here you can find all the fresh information about tournaments, live broadcasts of matches, as well as you can bet on your favorite team.</p>
+            <a href="#" class="button">Learn more</a>           
+        </div>
+        <div class="landing_imgbox">
+            <img src="./assets/icons/mka.png" class="starbucks">
+        </div>
+    </div>    
+</div>
+
+<div class="footer">
+    <div class="footer_socials">
+        <a href="#"><img src="./assets/icons/socials/discord.png" alt=""></a>
+        <!-- <a href="#"><img src="./assets/icons/socials/twitch.png" alt=""></a> -->
+        <a href="#"><img src="./assets/icons/socials/vk.png" alt=""></a>
+        <a href="#"><img src="./assets/icons/socials/youtube.png" alt=""></a>
+    </div>
+    <div class="footer_copyright">
+        <p>&copy; Made by Liubov</p>
+    </div>
+</div>
+
+
